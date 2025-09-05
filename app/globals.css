@@ -1,26 +1,59 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+    font-family: 'regular';
+    src: url('/font/Pretendard-Regular.otf');
+}
+@font-face {
+    font-family: 'extra-light';
+    src: url('/font/Pretendard-ExtraLight.otf');
+}
+@font-face {
+    font-family: 'light';
+    src: url('/font/Pretendard-Light.otf');
+}
+@font-face {
+    font-family: 'thin';
+    src: url('/font/Pretendard-Thin.otf');
+}
+@font-face {
+    font-family: 'medium';
+    src: url('/font/Pretendard-Medium.otf');
+}
+@font-face {
+    font-family: 'semi-bold';
+    src: url('/font/Pretendard-SemiBold.otf');
+}
+@font-face {
+    font-family: 'bold';
+    src: url('/font/Pretendard-Bold.otf');
+}
+@font-face {
+    font-family: 'extra-bold';
+    src: url('/font/Pretendard-ExtraBold.otf');
+}
+@font-face {
+    font-family: 'black';
+    src: url('/font/Pretendard-Black.otf');
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-regular: 'regular';
+  --font-extra_light: 'extra-light';
+  --font-light: 'light';
+  --font-thin: 'thin';
+  --font-medium: 'medium';
+  --font-semi_bold: 'semi-bold';
+  --font-bold: 'bold';
+  --font-extra_bold: 'extra-bold';
+  --font-black: 'black';
+
+  --color-cblue: #3794FF;
+  --color-cgray: #505050;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+    .btn {
+        @apply bg-cblue text-white w-full py-2 cursor-pointer rounded-md text-lg hover:brightness-95 transition-all
+    }
 }
