@@ -1,11 +1,11 @@
 import FormInput from '@/components/form-input'
 import Link from 'next/link'
 
-const CreateAccount = () => {
+const Login = () => {
     return (
         <div className='flex flex-col items-center p-10 gap-6'>
             <div className='my-auto'>
-                <h1 className='text-3xl font-bold'>회원가입</h1>
+                <h1 className='text-3xl font-bold'>로그인</h1>
             </div>
             <form className='w-full gap-3 flex flex-col'>
                 <FormInput
@@ -13,26 +13,18 @@ const CreateAccount = () => {
                     placeholder='학생 이메일을 입력해주세요. (s25학번@yeongjong.icehs.kr)'
                 />
                 <FormInput
-                    type='text'
-                    placeholder='본명을 입력해주세요.'
-                />
-                <FormInput
                     type='password'
                     placeholder='비밀번호를 입력해주세요.'
                 />
-                <FormInput
-                    type='password'
-                    placeholder='비밀번호를 다시 입력해주세요.'
-                />
-                <button className='btn' type='submit'>가입하기</button>
+                <button className='btn' type='submit'>로그인</button>
             </form>
             <div className='flex gap-1 text-gray-400'>
-                <div>이미 계정이 있나요?</div>
+                <div>아직 계정이 없나요?</div>
                 <div>&#183;</div>
-                <Link href='/login' className='hover:underline'>로그인</Link>
+                <Link href='/create-account' className='hover:underline'>회원가입</Link>
             </div>
         </div>
     )
 }
 
-export default CreateAccount
+export default Login
