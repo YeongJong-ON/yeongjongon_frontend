@@ -10,7 +10,7 @@ export default function CommunityLayout({
     <html lang='ko'>
       <body className='font-regular *:text-cgray'>
         <NavBar />
-        <div>{children}</div>
+        <div className='pt-24 px-16'>{children}</div>
       </body>
     </html>
   );

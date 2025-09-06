@@ -8,7 +8,7 @@ const FormInput = (props: FormInputType) => {
         <input
             type={props.type}
             placeholder={props.placeholder}
-            className='w-full ring-1 ring-gray-400 pl-3 py-2 rounded-md outline-none transition focus:ring-2 focus:ring-cblue'
+            className='w-full ring-1 ring-gray-200 pl-3 py-2 rounded-md outline-none transition focus:ring-2 focus:ring-cblue'
             required
         />
     )
